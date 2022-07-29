@@ -1,1 +1,22 @@
-<nav class="bg-slate-900 h-full w-full"></nav>
+<nav
+  class="bg-slate-900 h-full w-full flex flex-col p-2 border-r border-slate-700 select-none gap-7 text-slate-300"
+>
+  <header>
+    <div class="text-center flex justify-center flex-col gap-2">
+      <hero-icon
+        name="cube"
+        hostDisplay="block"
+        type="outline"
+        class="w-1/3 m-auto"
+      ></hero-icon>
+      <div>
+        <h1 class="text-lg font-medium">E2EE Network</h1>
+        <h3 class="text-slate-400 text-sm">v0.0.0</h3>
+      </div>
+    </div>
+  </header>
+  <article class="flex-1">
+    <app-nav-button [text]="'בית'"></app-nav-button>
+  </article>
+  <footer></footer>
+</nav>
