@@ -13,6 +13,7 @@ import {
 })
 export class NavButtonComponent implements OnInit {
   @Input() text!: string;
+  @Input() to!: string;
   @Input() selected?: boolean = false;
 
   @ContentChildren('widget')
