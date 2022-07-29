@@ -14,4 +14,8 @@ export class SideBarComponent implements OnInit {
   get currentApplicationVersion() {
     return environment.appVersion;
   }
+
+  get githubUrl() {
+    return environment.githubUrl;
+  }
 }

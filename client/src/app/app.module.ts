@@ -7,17 +7,14 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { MainComponent } from './main/main.component';
 import { cube, HeroIconModule, home } from 'ng-heroicon';
 import { NavButtonComponent } from './side-bar/nav-button/nav-button.component';
+import { SideBarModule } from './side-bar/side-bar.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SideBarComponent,
-    MainComponent,
-    NavButtonComponent,
-  ],
+  declarations: [AppComponent, MainComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SideBarModule,
     HeroIconModule.forRoot(
       { cube, home },
       {
