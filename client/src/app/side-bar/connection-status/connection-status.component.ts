@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeroIconName } from 'ng-heroicon';
 import { ConnectionStatus } from 'src/app/connection-status';
 
 @Component({
@@ -17,6 +18,17 @@ export class ConnectionStatusComponent implements OnInit {
         return 'offline';
       default:
         return 'getting you online...';
+    }
+  }
+
+  get statusIcon(): HeroIconName {
+    switch (this.connection) {
+      case ConnectionStatus.CONNECTED:
+        return 'status-online';
+      case ConnectionStatus.OFFLINE:
+        return 'status-offline';
+      default:
+        return 'refresh';
     }
   }
 

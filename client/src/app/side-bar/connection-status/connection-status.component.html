@@ -6,14 +6,17 @@
   "
   class="text-[0.75rem] flex gap-2 items-center"
 >
-  <div
-    class="rounded-full w-1 h-1"
+  <hero-icon
+    type="outline"
     [ngClass]="
-      { '0': 'bg-orange-400', '1': 'bg-green-600', '2': 'bg-red-700' }[
-        connection.toString()
-      ] + ''
+      {
+        '0': 'bg-orange-400',
+        '1': 'bg-green-600 ',
+        '2': 'bg-red-700'
+      }[connection.toString()] + ''
     "
-    [class.animate-ping]="connection === 0"
-  ></div>
+    [name]="statusIcon"
+    class="w-4 h-4 animate-pulse"
+  ></hero-icon>
   <span>{{ connectionStatus }}</span>
 </div>

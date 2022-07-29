@@ -5,8 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { MainComponent } from './main/main.component';
-import { cube, HeroIconModule, home } from 'ng-heroicon';
-import { NavButtonComponent } from './side-bar/nav-button/nav-button.component';
+import {
+  cube,
+  HeroIconModule,
+  home,
+  statusOnline,
+  statusOffline,
+  refresh,
+  chartBar,
+  chatAlt2,
+} from 'ng-heroicon';
 import { SideBarModule } from './side-bar/side-bar.module';
 
 @NgModule({
@@ -16,7 +24,15 @@ import { SideBarModule } from './side-bar/side-bar.module';
     AppRoutingModule,
     SideBarModule,
     HeroIconModule.forRoot(
-      { cube, home },
+      {
+        cube,
+        home,
+        statusOnline,
+        statusOffline,
+        refresh,
+        chartBar,
+        chatAlt2,
+      },
       {
         defaultHostDisplay: 'inlineBlock', // default 'none'
         attachDefaultDimensionsIfNoneFound: true, // default 'false'
