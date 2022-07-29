@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { MainComponent } from './main/main.component';
-import { cube, HeroIconModule, menu } from 'ng-heroicon';
+import { cube, HeroIconModule, home } from 'ng-heroicon';
 import { NavButtonComponent } from './side-bar/nav-button/nav-button.component';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { NavButtonComponent } from './side-bar/nav-button/nav-button.component';
     BrowserModule,
     AppRoutingModule,
     HeroIconModule.forRoot(
-      { cube },
+      { cube, home },
       {
         defaultHostDisplay: 'inlineBlock', // default 'none'
         attachDefaultDimensionsIfNoneFound: true, // default 'false'

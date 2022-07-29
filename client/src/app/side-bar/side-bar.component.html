@@ -6,17 +6,37 @@
       <hero-icon
         name="cube"
         hostDisplay="block"
-        type="outline"
+        type="solid"
         class="w-1/3 m-auto"
       ></hero-icon>
       <div>
         <h1 class="text-lg font-medium">E2EE Network</h1>
-        <h3 class="text-slate-400 text-sm">v0.0.0</h3>
+        <h3 class="text-slate-400 text-sm">v{{ currentApplicationVersion }}</h3>
       </div>
     </div>
   </header>
-  <article class="flex-1">
-    <app-nav-button [text]="'בית'"></app-nav-button>
+  <article class="flex-1 flex flex-col gap-2">
+    <app-nav-button [text]="'Home'" [selected]="true">
+      <hero-icon
+        name="home"
+        type="solid"
+        class="fill-slate-300 h-5/6"
+      ></hero-icon>
+    </app-nav-button>
+    <app-nav-button [text]="'Stats'">
+      <hero-icon
+        name="home"
+        type="solid"
+        class="fill-slate-300 h-5/6"
+      ></hero-icon
+    ></app-nav-button>
+    <app-nav-button [text]="'בית'">
+      <hero-icon
+        name="home"
+        type="solid"
+        class="fill-slate-300 h-5/6"
+      ></hero-icon
+    ></app-nav-button>
   </article>
   <footer></footer>
 </nav>

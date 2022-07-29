@@ -1,4 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  ContentChildren,
+  Input,
+  OnInit,
+  QueryList,
+} from '@angular/core';
 
 @Component({
   selector: 'app-nav-button',
@@ -7,6 +13,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NavButtonComponent implements OnInit {
   @Input() text!: string;
+  @Input() selected?: boolean = false;
+
+  @ContentChildren('widget')
+  widgets?: QueryList<Component>;
 
   constructor() {}
 

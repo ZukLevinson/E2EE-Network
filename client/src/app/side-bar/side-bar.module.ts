@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeroIconModule, cube } from 'ng-heroicon';
+import { HeroIconModule, cube, home } from 'ng-heroicon';
 
 @NgModule({
   declarations: [],
@@ -9,6 +9,7 @@ import { HeroIconModule, cube } from 'ng-heroicon';
     HeroIconModule.withIcons(
       {
         cube,
+        home,
       },
       {}
     ),
