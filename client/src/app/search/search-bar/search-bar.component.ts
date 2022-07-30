@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Tag } from 'src/types';
 
 @Component({
   selector: 'app-search-bar',
@@ -7,6 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBarComponent implements OnInit {
   search!: string;
+  options: Tag[] = [
+    {
+      text: 'Images',
+      value: 'images',
+      iconName: 'photograph',
+    },
+    {
+      text: 'Texts',
+      value: 'texts',
+      iconName: 'chat',
+    },
+    {
+      text: 'Documents',
+      value: 'docs',
+      iconName: 'document-text',
+    },
+    {
+      text: 'Recordings',
+      value: 'recordings',
+      iconName: 'microphone',
+    },
+  ];
 
   constructor() {}
 

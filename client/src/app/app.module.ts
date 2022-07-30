@@ -17,6 +17,10 @@ import {
   cog,
   userCircle,
   search,
+  photograph,
+  chat,
+  documentText,
+  microphone,
 } from 'ng-heroicon';
 import { SideBarModule } from './side-bar/side-bar.module';
 import { CardComponent } from './card/card.component';
@@ -44,6 +48,10 @@ import { SearchModule } from './search/search.module';
         cog,
         userCircle,
         search,
+        photograph,
+        chat,
+        documentText,
+        microphone
       },
       {
         defaultHostDisplay: 'inlineBlock',
