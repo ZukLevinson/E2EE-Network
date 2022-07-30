@@ -1,1 +1,61 @@
-<p>side-bar works!</p>
+<nav
+  class="bg-slate-900 h-full w-full flex flex-col p-5 border-r border-slate-700 select-none gap-7 text-slate-300"
+>
+  <header class="flex flex-col gap-3">
+    <div class="text-center flex justify-center flex-col gap-2">
+      <hero-icon
+        name="cube"
+        hostDisplay="block"
+        type="solid"
+        class="w-1/3 m-auto"
+      ></hero-icon>
+      <div>
+        <h1 class="text-lg font-medium">E2EE Network</h1>
+        <h3 class="text-slate-400 text-sm">v{{ currentApplicationVersion }}</h3>
+      </div>
+    </div>
+
+    <div class="flex-1 flex flex-col gap-2">
+      <app-nav-button [text]="'Home'" to="/home" iconName="home">
+      </app-nav-button>
+      <app-nav-button [text]="'Stats'" to="/stats" iconName="chart-bar">
+      </app-nav-button>
+      <app-nav-button [text]="'Chats'" to="/chats" iconName="chat-alt-2">
+      </app-nav-button>
+    </div>
+  </header>
+  <article
+    class="bg-slate-800/50 flex-1 rounded overflow-auto p-2 gap-2 flex flex-col"
+  >
+    <div *ngIf="!users.length; else chats" class="flex h-full items-center justify-center">
+      <span>start chatting!</span>
+    </div>
+    <ng-template #chats
+      ><app-chat-status
+        *ngFor="let user of users"
+        [contact]="user"
+      ></app-chat-status
+    ></ng-template>
+  </article>
+  <footer class="flex flex-col">
+    <app-nav-button
+      to="/profile"
+      text="Profile"
+      iconName="user-circle"
+    ></app-nav-button>
+    <app-nav-button
+      to="/settings"
+      text="Settings"
+      iconName="cog"
+    ></app-nav-button>
+    <div
+      class="border-t-2 border-slate-600/50 pt-3 mt-3 flex flex-col gap-2 items-center"
+    >
+      <app-connection-status></app-connection-status>
+      <span class="text-xs m-auto text-slate-600/75"
+        >created by
+        <a [href]="githubUrl" class="underline">@zuklevinson</a></span
+      >
+    </div>
+  </footer>
+</nav>
