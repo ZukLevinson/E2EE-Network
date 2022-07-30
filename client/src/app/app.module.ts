@@ -26,6 +26,7 @@ import { SideBarModule } from './side-bar/side-bar.module';
 import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchModule } from './search/search.module';
+import { ChatsModule } from './chats/chats.module';
 
 @NgModule({
   declarations: [AppComponent, MainComponent, CardComponent],
@@ -34,6 +35,7 @@ import { SearchModule } from './search/search.module';
     AppRoutingModule,
     SideBarModule,
     SearchModule,
+    ChatsModule,
     HttpClientModule,
     HeroIconModule.forRoot(
       {
@@ -51,7 +53,7 @@ import { SearchModule } from './search/search.module';
         photograph,
         chat,
         documentText,
-        microphone
+        microphone,
       },
       {
         defaultHostDisplay: 'inlineBlock',
