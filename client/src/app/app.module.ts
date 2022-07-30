@@ -16,10 +16,12 @@ import {
   user,
   cog,
   userCircle,
+  search,
 } from 'ng-heroicon';
 import { SideBarModule } from './side-bar/side-bar.module';
 import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchModule } from './search/search.module';
 
 @NgModule({
   declarations: [AppComponent, MainComponent, CardComponent],
@@ -27,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     SideBarModule,
+    SearchModule,
     HttpClientModule,
     HeroIconModule.forRoot(
       {
@@ -39,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
         chatAlt2,
         user,
         cog,
-        userCircle
+        userCircle,
+        search,
       },
       {
         defaultHostDisplay: 'inlineBlock',

@@ -1,0 +1,13 @@
+<div class="flex relative">
+  <hero-icon
+    class="fill-slate-700 text-slate-700 absolute left-0 h-full p-2"
+    type="solid"
+    name="search"
+  ></hero-icon>
+  <input
+    type="solid"
+    class="bg-transparent border-slate-700 border-[1px] rounded flex-1 p-1 pl-9 text-slate-100 font-medium focus:outline-slate-800 focus:outline-1"
+    #seacrh
+    (keyup)="updateSearch(seacrh.value)"
+  />
+</div>
