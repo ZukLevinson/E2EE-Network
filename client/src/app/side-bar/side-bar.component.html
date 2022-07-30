@@ -27,10 +27,15 @@
   <article
     class="bg-slate-800/50 flex-1 rounded overflow-auto p-2 gap-2 flex flex-col"
   >
-    <app-chat-status
-      *ngFor="let user of users"
-      [contact]="user"
-    ></app-chat-status>
+    <div *ngIf="!users.length; else chats" class="flex h-full items-center justify-center">
+      <span>start chatting!</span>
+    </div>
+    <ng-template #chats
+      ><app-chat-status
+        *ngFor="let user of users"
+        [contact]="user"
+      ></app-chat-status
+    ></ng-template>
   </article>
   <footer class="flex flex-col">
     <app-nav-button
