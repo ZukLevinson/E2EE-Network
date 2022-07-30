@@ -9,6 +9,7 @@ import {
   chatAlt2,
   refresh,
   statusOnline,
+  user,
 } from 'ng-heroicon';
 import { ConnectionStatusComponent } from './connection-status/connection-status.component';
 import { NavButtonComponent } from './nav-button/nav-button.component';
@@ -35,6 +36,7 @@ import { ChatStatusComponent } from './chat-status/chat-status.component';
         refresh,
         chartBar,
         chatAlt2,
+        user
       },
       {}
     ),

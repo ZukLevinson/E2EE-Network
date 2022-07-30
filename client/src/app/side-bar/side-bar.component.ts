@@ -11,7 +11,7 @@ import { ProfileImageLoaderService } from '../contact/profile-image-loader.servi
 export class SideBarComponent implements OnInit {
   constructor(private profileImageLoaderService: ProfileImageLoaderService) {}
 
-  ngOnInit(): void {}
+  users!: Contact[];
 
   get currentApplicationVersion() {
     return environment.appVersion;
@@ -22,9 +22,13 @@ export class SideBarComponent implements OnInit {
   }
 
   get getUsers(): Contact[] {
-    return Array.from({ length: 10 }, () => {
+    return Array.from({ length: Math.round(Math.random() * 20) }, () => {
       const name = this.profileImageLoaderService.generateName();
-      return { name, imageId: undefined };
+      return { name, imageId: Math.random() > 0.5 ? name : undefined };
     });
+  }
+
+  ngOnInit(): void {
+    this.users = this.getUsers;
   }
 }

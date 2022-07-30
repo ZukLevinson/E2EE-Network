@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ContactsService } from 'src/app/users/contacts.service';
 import { Contact } from 'src/types';
 import { ProfileImageLoaderService } from '../../contact/profile-image-loader.service';
 
@@ -10,6 +11,7 @@ import { ProfileImageLoaderService } from '../../contact/profile-image-loader.se
 export class ChatStatusComponent implements OnInit {
   @Input() contact!: Contact;
   @Input() profilePicture?: string;
+  connected: boolean = false;
 
   createImageFromBlob(image: Blob): void {
     let reader = new FileReader();
@@ -28,7 +30,10 @@ export class ChatStatusComponent implements OnInit {
     }
   }
 
-  constructor(private profileImageLoaderService: ProfileImageLoaderService) {}
+  constructor(
+    private profileImageLoaderService: ProfileImageLoaderService,
+    private contactsService: ContactsService
+  ) {}
 
   ngOnInit(): void {
     if (!!this.contact.imageId) {
@@ -36,6 +41,10 @@ export class ChatStatusComponent implements OnInit {
         .findImage(this.contact.imageId)
         .subscribe((image) => this.createImageFromBlob(image));
     }
+
+    this.contactsService
+      .getOnlineStatus(this.contact)
+      .subscribe((connection) => (this.connected = connection.connected));
   }
 
   ngOnChanges(): void {

@@ -13,6 +13,7 @@ import {
   refresh,
   chartBar,
   chatAlt2,
+  user,
 } from 'ng-heroicon';
 import { SideBarModule } from './side-bar/side-bar.module';
 import { CardComponent } from './card/card.component';
@@ -34,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
         refresh,
         chartBar,
         chatAlt2,
+        user,
       },
       {
         defaultHostDisplay: 'inlineBlock',
