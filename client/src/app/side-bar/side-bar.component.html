@@ -24,11 +24,33 @@
       </app-nav-button>
     </div>
   </header>
-  <article class="bg-slate-800/50 flex-1 rounded overflow-auto p-2 gap-2 flex flex-col">
+  <article
+    class="bg-slate-800/50 flex-1 rounded overflow-auto p-2 gap-2 flex flex-col"
+  >
     <app-chat-status
       *ngFor="let user of users"
       [contact]="user"
     ></app-chat-status>
   </article>
-  <footer><app-connection-status></app-connection-status></footer>
+  <footer class="flex flex-col">
+    <app-nav-button
+      to="/profile"
+      text="Profile"
+      iconName="user-circle"
+    ></app-nav-button>
+    <app-nav-button
+      to="/settings"
+      text="Settings"
+      iconName="cog"
+    ></app-nav-button>
+    <div
+      class="border-t-2 border-slate-600/50 pt-3 mt-3 flex flex-col gap-2 items-center"
+    >
+      <app-connection-status></app-connection-status>
+      <span class="text-xs m-auto text-slate-600/75"
+        >created by
+        <a [href]="githubUrl" class="underline">@zuklevinson</a></span
+      >
+    </div>
+  </footer>
 </nav>

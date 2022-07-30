@@ -14,6 +14,8 @@ import {
   chartBar,
   chatAlt2,
   user,
+  cog,
+  userCircle,
 } from 'ng-heroicon';
 import { SideBarModule } from './side-bar/side-bar.module';
 import { CardComponent } from './card/card.component';
@@ -36,6 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
         chartBar,
         chatAlt2,
         user,
+        cog,
+        userCircle
       },
       {
         defaultHostDisplay: 'inlineBlock',
