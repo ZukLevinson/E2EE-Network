@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
 import { MainComponent } from './main/main.component';
 import {
   cube,
@@ -16,13 +15,16 @@ import {
   chatAlt2,
 } from 'ng-heroicon';
 import { SideBarModule } from './side-bar/side-bar.module';
+import { CardComponent } from './card/card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent],
+  declarations: [AppComponent, MainComponent, CardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SideBarModule,
+    HttpClientModule,
     HeroIconModule.forRoot(
       {
         cube,
@@ -34,8 +36,8 @@ import { SideBarModule } from './side-bar/side-bar.module';
         chatAlt2,
       },
       {
-        defaultHostDisplay: 'inlineBlock', // default 'none'
-        attachDefaultDimensionsIfNoneFound: true, // default 'false'
+        defaultHostDisplay: 'inlineBlock',
+        attachDefaultDimensionsIfNoneFound: true,
       }
     ),
   ],

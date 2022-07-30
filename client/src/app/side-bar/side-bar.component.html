@@ -24,6 +24,11 @@
       </app-nav-button>
     </div>
   </header>
-  <article class="bg-slate-800/50 flex-1 rounded"></article>
+  <article class="bg-slate-800/50 flex-1 rounded overflow-auto">
+    <app-chat-status
+      *ngFor="let user of getUsers"
+      [contact]="user"
+    ></app-chat-status>
+  </article>
   <footer><app-connection-status></app-connection-status></footer>
 </nav>

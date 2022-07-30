@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Contact } from 'src/types';
+import { ProfileImageLoaderService } from '../contact/profile-image-loader.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -7,7 +9,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./side-bar.component.scss'],
 })
 export class SideBarComponent implements OnInit {
-  constructor() {}
+  constructor(private profileImageLoaderService: ProfileImageLoaderService) {}
 
   ngOnInit(): void {}
 
@@ -17,5 +19,12 @@ export class SideBarComponent implements OnInit {
 
   get githubUrl() {
     return environment.githubUrl;
+  }
+
+  get getUsers(): Contact[] {
+    return Array.from({ length: 10 }, () => {
+      const name = this.profileImageLoaderService.generateName();
+      return { name, imageId: undefined };
+    });
   }
 }

@@ -14,12 +14,14 @@ import { ConnectionStatusComponent } from './connection-status/connection-status
 import { NavButtonComponent } from './nav-button/nav-button.component';
 import { SideBarComponent } from './side-bar.component';
 import { RouterModule } from '@angular/router';
+import { ChatStatusComponent } from './chat-status/chat-status.component';
 
 @NgModule({
   declarations: [
     ConnectionStatusComponent,
     NavButtonComponent,
     SideBarComponent,
+    ChatStatusComponent,
   ],
   imports: [
     CommonModule,
