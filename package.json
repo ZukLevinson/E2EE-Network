@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "lerna run start --scope=chatting-app --stream",
-    "build": "lerna run build --scope=chatting-app,shared --stream",
+    "start": "lerna run start --scope=chatting-client --stream",
+    "build": "lerna run build --scope=chatting-client,shared --stream",
     "buildlib": "lerna run build --scope=shared --stream",
     "watch": "ng build --watch --configuration development",
-    "test": "lerna run test --scope=chatting-app,shared --stream"
+    "test": "lerna run test --scope=chatting-client,shared --stream"
   },
   "private": true,
   "dependencies": {
