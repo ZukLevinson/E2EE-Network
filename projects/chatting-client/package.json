@@ -1,0 +1,13 @@
+{
+    "name": "chatting-client",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "ng serve chatting-client",
+        "build": "ng build chatting-client",
+        "test": "ng test chatting-client",
+        "lint": "ng lint chatting-client"
+    },
+    "dependencies": {
+        "shared": "^0.0.1"
+    }
+}
